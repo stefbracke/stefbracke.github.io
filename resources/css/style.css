@@ -2,6 +2,10 @@
 :root {
     --accent-color: sandybrown;
 }
+html {
+    scroll-behavior: smooth;
+}
+
 /* ------------------------------------------------------------------------ */
 /* BASIC SETUP */
 /* ------------------------------------------------------------------------ */
@@ -215,6 +219,9 @@ header {
     background-size: cover;
     background-position: center;
     height: 100vh;
+
+    /*I like it more without fixed background*/
+    /*background-attachment: fixed;*/
 }
 
 .hero-text-box {
@@ -385,4 +392,48 @@ header {
 }
 .city-feature{
     margin-bottom: 5px
+}
+
+/* ------------------------------------------------------------------------ */
+/* TESTIMONIALS */
+/* ------------------------------------------------------------------------ */
+
+.section-testimonials {
+    margin-top: 50px;
+    background-image: linear-gradient(rgb(115, 0, 0), rgba(0,0,0,0.0)), url("../css/img/backgroundmenu.jpg");
+    background-size: cover;
+    color: white;
+    background-attachment: fixed;
+}
+
+blockquote {
+    padding: 2%;
+    line-height: 145%;
+    font-style: italic;
+    position: relative;
+    margin-top: 30px;
+}
+
+blockquote:before {
+    content: '\201C';
+    font-size: 500%;
+    display:block;
+    position: absolute;
+    top: 5px;
+    left: -10px;
+}
+
+cite {
+    font-weight: 200;
+    font-size: 90%;
+    color: white;
+    display: block;
+    margin-top: 10px;
+}
+
+cite img{
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
 }
