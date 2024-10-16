@@ -166,7 +166,9 @@ a:active{
 /* ----- BUTTONS -----  */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit]
+ {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
@@ -181,7 +183,8 @@ a:active{
 
 /* --- Left button ---*/
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit]{
     background-color: rgba(165, 42, 42, 0.5);
     border: 3px solid #ffffff;
     color: white;
@@ -196,12 +199,15 @@ a:active{
 }
 
 .btn:hover,
-.btn:active{
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
     background-color: orange;
 }
 
 .btn-full:hover,
-.btn-full:active {
+.btn-full:active,
+input[type=submit]{
     border: 3px solid #ffffff;
 }
 .btn-ghost:hover,
@@ -436,4 +442,91 @@ cite img{
     border-radius: 50%;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+/* ------------------------------------------------------------------------ */
+/* PLANS */
+/* ------------------------------------------------------------------------ */
+
+.section-plans {
+    background-color: #816262;
+}
+
+.plan-box {
+    background-color: silver;
+    border-radius: 5px;
+    width: 90%;
+    margin-left: 5%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid black;
+}
+.plan-box div:first-child{
+    background-color: rgba(181, 148, 148, 1);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.plan-box div:last-child{
+text-align: center;
+    border:0;
+}
+
+.plan-price {
+    font-size: 300%;
+    color: var(--accent-color);
+    font-weight: 100;
+    margin-bottom: 10px;
+}
+
+.plan-price span {
+    font-size: 40%;
+    font-weight: 300;
+}
+.plan-price-work {
+    font-size: 90%;
+    color: var(--accent-color);
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+.plan-box ul {
+    list-style: none;
+}
+
+.plan-box ul li {
+    padding: 5px 0;
+}
+
+/* ------------------------------------------------------------------------ */
+/* FORM */
+/* ------------------------------------------------------------------------ */
+
+.contact-form{
+    width:60%;
+    margin: 0 auto;
+    color: white;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    padding: 7px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea{
+    height: 100px;
+}
+
+input[type=checkbox]{
+    margin: 10px 5px 10px 0;
+}
+*:focus {
+    outline: none;
 }
