@@ -24,7 +24,8 @@ padding: 0;
 box-sizing: border-box;
 }
 
-html {
+html,
+body{
 /*background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .5)), url("../css/img/background_grid_pattern.jpg");*/
 
 background-image: url('../css/img/ue_grid_pattern.png');
@@ -37,6 +38,7 @@ font-family: 'Raleway', 'Arial', sans-serif;
 font-size: 20px;
 font-weight: 300;
 text-rendering: optimizeLegibility;
+overflow-x: hidden;
 }
 
 .clearfix {

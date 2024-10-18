@@ -1,0 +1,60 @@
+﻿/* big tablets to 1200px : widths smaller than the 1140px row */
+@media only screen and (max-width: 1200px) {
+.hero-text-box {width: 100%; padding: 0 2%;}
+.row {padding: 0 2%;}
+}
+
+/* small tablet to big tablet : 768 to 1023 px */
+@media only screen and (max-width: 1023px) {
+body { font-size: 16px; }
+section { padding: 60px 0; }
+.long-copy { width: 80%; margin-left: 10%; }
+
+.steps-box { margin-top: 10px; }
+.steps-box:last-child { margin-top: 10px; }
+.section-links {margin-bottom: 40px;}
+.section-links:last-of-type {margin-bottom: 60px;}
+
+.btn-app img { width: 70px; height: auto;}
+.btn-app {margin: 10px;}
+
+.icon-small { width: 20px;}
+.city-feature {font-size: 90%;}
+
+.plan-box {width: 100%; margin-left: 0%}
+.plan-price {font-size: 250%;}
+.contact-form {width: 80%;}
+}
+
+
+/* small phones to small tablets : 481 to 767 px */
+@media only screen and (max-width: 767px) {
+body { font-size: 14px; }
+section { padding: 40px 0; }
+.row,
+.hero-text-box { padding: 0 4%;}
+.col {width: 100%; margin: 0 0 4% 0;}
+.main-nav {display: none;}
+
+.btn-app img { width: 50px; height: auto;}
+.btn-app {margin: 5px;}
+
+h1 { font-size: 300%;}
+h4 { font-size: 150%;}
+.long-copy { width: 100%; margin-left: 0; }
+
+
+.section-links {margin-bottom: 20px;}
+.section-links:last-of-type {margin-bottom: 20px;}
+.section-plans {margin-bottom: 20px;}
+
+.plan-price{font-size: 350%; text-align: center}
+.plan-price-work {font-size: 150%; text-align: center; font-weight: 200}
+}
+
+
+/* small phones : 0 to 480 px */
+@media only screen and (max-width: 480px) {
+section { padding: 20px 0; }
+.contact-form {width: 100%;}
+}
