@@ -1,0 +1,54 @@
+# Ignore Node.js dependencies (if using npm)
+node_modules/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files created by editors
+*.swp
+*.swo
+*.tmp
+*.temp
+*~
+
+# Ignore specific files and directories created by various editors and tools
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Ignore compiled or minified files (if you only want to track original source files)
+*.min.js
+*.min.css
+
+# Ignore build output directories (if you have any)
+dist/
+build/
+
+# Ignore cache files from package managers
+.cache/
+npm-debug.log*
+
+# Ignore other cache and config directories
+.cache-loader/
+coverage/
+
+# Ignore files used for deployment
+.env
+*.bak
+
+# Ignore compiled CSS from preprocessors (like Sass or Less) if applicable
+*.sass-cache/
+*.scss-cache/
+
+# Ignore generated documentation
+docs/
+
+# Ignore other potential system-specific files
+*.bak
+*.orig
+*.old
+*.backup
+
+# Ignore large libraries or frameworks that should not be tracked
+public/vendor/
