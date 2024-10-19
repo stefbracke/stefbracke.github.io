@@ -52,3 +52,9 @@ docs/
 
 # Ignore large libraries or frameworks that should not be tracked
 public/vendor/
+
+# Ignore Yarn lockfile if using npm
+yarn.lock
+
+# Ignore OS-specific hidden files (Linux/Unix)
+.*~
