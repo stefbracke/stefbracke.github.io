@@ -1,6 +1,8 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+<script src="https://cdn.jsdelivr.net/npm/lucide"></script>
+
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 <link href="vendors/css/normalize.css"
@@ -25,7 +27,7 @@
 </head>
 <body>
 <header>
-<nav>
+<nav class="sticky">
 <div class="row">
 <img alt="Stef's logo"
      class="logo"
@@ -62,7 +64,14 @@ new challenges, and I'm always trying to improve myself.
 <div class="row">
 <div class="col span-1-of-4 box">
 <h3>Assets</h3>
-<i class="ion-cube icon-big"></i>
+<div class="icon-container">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box">
+<path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/>
+<path d="m3.3 7 8.7 5 8.7-5"/>
+<path d="M12 22V12"/>
+</svg>
+</div>
+
 <p>
 I can make 3D models, textures, animations, and more. I
 can
@@ -71,8 +80,8 @@ make assets for games, websites, and other projects.
 </div>
 <div class="col span-1-of-4 box">
 <h3>Coding</h3>
-<i class="ion-code icon-big"></i>
-<p>
+<div class="icon-container">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-code"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div><p>
 I can program in C#, JavaScript, HTML, CSS, and more. I
 can
 make games, websites, and other applications.
@@ -80,8 +89,8 @@ make games, websites, and other applications.
 </div>
 <div class="col span-1-of-4 box">
 <h3>Pipeline</h3>
-<i class="ion-ios-gear icon-big"></i>
-<p>
+<div class="icon-container">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cog"><path d="M12 20a8 8 0 1 0 0-16 8 8 0 0 0 0 16Z"/><path d="M12 14a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/><path d="M12 2v2"/><path d="M12 22v-2"/><path d="m17 20.66-1-1.73"/><path d="M11 10.27 7 3.34"/><path d="m20.66 17-1.73-1"/><path d="m3.34 7 1.73 1"/><path d="M14 12h8"/><path d="M2 12h2"/><path d="m20.66 7-1.73 1"/><path d="m3.34 17 1.73-1"/><path d="m17 3.34-1 1.73"/><path d="m11 13.73-4 6.93"/></svg></div><p>
 I can make pipelines for games, websites, and other
 projects. I
 can make tools to make the workflow easier and faster.
@@ -89,8 +98,8 @@ can make tools to make the workflow easier and faster.
 </div>
 <div class="col span-1-of-4 box">
 <h3>Technical Art</h3>
-<i class="ion-wrench icon-big"></i>
-<p>
+<div class="icon-container">
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-wrench"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div><p>
 I'm a creative person who loves to make things. I'm
 always
 looking for new challenges, and I'm always trying to
@@ -493,5 +502,7 @@ us?</label>
 <p>Copyright &copy; 2024 by Stef Bracke. All rights reserved.</p>
 </div>
 </footer>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="resources/js/script.js"></script>
 </body>
 </html>

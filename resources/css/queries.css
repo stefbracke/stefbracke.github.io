@@ -2,6 +2,7 @@
 @media only screen and (max-width: 1200px) {
 .hero-text-box {width: 100%; padding: 0 2%;}
 .row {padding: 0 2%;}
+.icon-container svg {width: 70px; height: 70px;}
 }
 
 /* small tablet to big tablet : 768 to 1023 px */
@@ -17,6 +18,8 @@ section { padding: 60px 0; }
 
 .btn-app img { width: 70px; height: auto;}
 .btn-app {margin: 10px;}
+
+.icon-container svg {width: 60px; height: 60px;}
 
 .icon-small { width: 20px;}
 .city-feature {font-size: 90%;}
@@ -39,6 +42,8 @@ section { padding: 40px 0; }
 .btn-app img { width: 50px; height: auto;}
 .btn-app {margin: 5px;}
 
+.icon-container svg {width: 50px; height: 50px;}
+
 h1 { font-size: 300%;}
 h4 { font-size: 150%;}
 .long-copy { width: 100%; margin-left: 0; }
@@ -57,4 +62,6 @@ h4 { font-size: 150%;}
 @media only screen and (max-width: 480px) {
 section { padding: 20px 0; }
 .contact-form {width: 100%;}
+.icon-container svg {width: 30px; height: 30px;}
+
 }
