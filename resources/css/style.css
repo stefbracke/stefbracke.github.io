@@ -6,7 +6,7 @@
 
 --color-peace: #ffa502;
 --color-grisaille: #57606f;
---color-bay-wharf:#747d8c;
+--color-bay-wharf: #747d8c;
 --color-prestige-blue: #2f3542;
 --color-golden-sand: #ffa502;
 }
@@ -26,7 +26,7 @@ box-sizing: border-box;
 }
 
 html,
-body{
+body {
 /*background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, .5)), url("../css/img/background_grid_pattern.jpg");*/
 
 background-image: url('../css/img/ue_grid_pattern.png');
@@ -149,11 +149,12 @@ line-height: 145%;
 }
 
 /* ----- ICONS -----  */
-.icon-container{
+.icon-container {
 display: flex;
 justify-content: center;
 align-items: center;
 margin: 10px}
+
 .icon-container svg {
 width: 80px;
 height: 80px;
@@ -270,16 +271,16 @@ transform: translate(-50%, -50%);
 }
 
 .logo {
-height: 40px;
+height: 100px;
 width: auto;
 float: left;
-margin-top: 10px;
+margin-top: 15px;
 }
 
 .main-nav {
 float: right;
 list-style: none;
-margin-top: 60px;
+margin-top: 50px;
 }
 
 .main-nav li {
@@ -289,7 +290,7 @@ margin-left: 40px;
 
 .main-nav li a:link,
 .main-nav li a:visited {
-padding: 2px 0;
+padding: 8px 0;
 color: white;
 text-decoration: none;
 text-transform: uppercase;
@@ -306,30 +307,29 @@ border-bottom: 2px solid #ffa502;
 }
 
 /* Sticky navi*/
-.sticky{
+.sticky {
 position: fixed;
 top: 0;
 left: 0;
 width: 100%;
 background-color: rgba(231, 231, 231, 0.98);
 box-shadow: 0 2px 2px black;
+z-index: 9999;
 }
 
-.main-nav {
-
-margin-top: 15px;
-}
+.sticky .main-nav { margin-top: 18px;}
 
 .sticky .main-nav li a:link,
 .sticky .main-nav li a:visited {
-padding: 15px 0;
+padding: 16px 0;
 color: #555;
 text-decoration: none;
 text-transform: uppercase;
 font-size: 90%;
 border-bottom: 2px solid transparent;
-
 }
+
+.sticky .logo { height: 50px; margin-top: 0; }
 
 /* ------------------------------------------------------------------------ */
 /* FEATURES */
@@ -337,10 +337,11 @@ border-bottom: 2px solid transparent;
 
 .section-features .long-copy {
 margin-bottom: 40px;
-color:#dfe4ea;
+color: #dfe4ea;
 }
-.section-features  {
-color:#dfe4ea;
+
+.section-features {
+color: #dfe4ea;
 }
 
 /* ------------------------------------------------------------------------ */
@@ -571,7 +572,7 @@ color: white;
 }
 
 #find-us {
-color:initial;
+color: initial;
 }
 
 
