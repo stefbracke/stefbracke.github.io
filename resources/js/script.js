@@ -1,4 +1,3 @@
-import 'animate.css';
 $(document).ready(function () {
     /* For the sticky navigation */
     $('.js--section-features').waypoint(function (direction) {
@@ -13,14 +12,18 @@ $(document).ready(function () {
 
     /* Scroll on buttons */
     $('.js--scroll-to-plans').click(function () {
-        $('html, body').animate({scrollTop:
-            $('.js--section-plans').offset().top}, 1000);
+        $('html, body').animate({
+            scrollTop:
+            $('.js--section-plans').offset().top
+        }, 1000);
     });
     $('.js--scroll-to-start').click(function () {
-        $('html, body').animate({scrollTop:
-            $('.js--section-features').offset().top}, 1000);
+        $('html, body').animate({
+            scrollTop:
+            $('.js--section-features').offset().top
+        }, 1000);
     });
-    
+
     /* Navigation scroll */
     $(function () {
         $('a[href*="#"]:not([href="#"])').click(function () {
@@ -38,7 +41,50 @@ $(document).ready(function () {
 
     /* Animations on scroll */
     $('.js--wp-1').waypoint(function (direction) {
-        $('.js--wp-1').addClass('animate__fadeIn');
-    })
+        $('.js--wp-1').addClass('animate__animated animate__fadeIn');
+    }, {
+        offset: '50%'
+    });
 
+    $('.js--wp-2').waypoint(function (direction) {
+        $('.js--wp-2').addClass('animate__animated animate__fadeInUp');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--wp-3').waypoint(function (direction) {
+        $('.js--wp-3').addClass('animate__animated animate__fadeIn');
+    }, {
+        offset: '50%'
+    });
+
+    $('.js--wp-4').waypoint(function (direction) {
+        $('.js--wp-4').addClass('animate__animated animate__pulse');
+    }, {
+        offset: '50%'
+    });
+
+    /* Mobile navigation */
+    $('.js--section-features').waypoint(function (direction) {
+        if (direction == "down") {
+            $('nav').addClass('sticky');
+        } else {
+            $('nav').removeClass('sticky');
+        }
+    }, {
+        offset: '100px'
+    });
+
+    /* Toggle mobile nav icons */
+    $('.js--nav-icon').click(function () {
+        var nav = $('.js--main-nav');
+        var menuIcon = $('.js--nav-icon-menu');
+        var closeIcon = $('.js--nav-icon-close');
+
+        nav.slideToggle(200);
+
+        // Toggle visibility of icons
+        menuIcon.toggleClass('hidden');
+        closeIcon.toggleClass('hidden');
+    });
 });
