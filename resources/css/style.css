@@ -660,24 +660,35 @@ font-size: 160%;
 transition: color 0.2s ease;
 }
 
-.ion-social-facebook:hover {
-color: #3b5998;
+.lucide-facebook:hover {
+color: #4267B2;
 }
 
-.ion-social-twitter:hover {
-color: #00aced;
+.lucide-twitter:hover {
+color: #1DA1F2;
 }
 
-.ion-social-googleplus:hover {
-color: #dd4b39;
+.lucide-linkedin:hover {
+color: #0077B5;
 }
 
-.ion-social-instagram:hover {
-color: #517fa4;
+.lucide-instagram:hover {
+color: #E1306C;
 }
 
 footer p {
 color: #a8a8a8;
 text-align: center;
 margin-top: 20px;
+}
+/* ------------------------------------------------------------------------ */
+/* ANIMATIONS */
+/* ------------------------------------------------------------------------ */
+
+.js--wp-1{
+opacity: 0;
+}
+
+.js--wp-1 .animated {
+opacity:1;
 }

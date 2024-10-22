@@ -1,16 +1,12 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-<!--<script src="https://cdn.jsdelivr.net/npm/lucide"></script>-->
 <meta name="viewport"
       content="width=device-width, initial-scale=1.0">
 <link href="vendors/css/normalize.css"
       rel="stylesheet"
       type="text/css">
 <link href="vendors/css/grid.css"
-      rel="stylesheet"
-      type="text/css">
-<link href="vendors/css/ionicons.min.css"
       rel="stylesheet"
       type="text/css">
 <link href="resources/css/style.css"
@@ -22,33 +18,37 @@
 <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
       type="text/css">
+
 <title>Portfolio</title>
 </head>
 <body>
 <header>
+
 <nav>
 <div class="row">
 <img alt="Stef's logo"
      class="logo"
      src="resources/img/logo_transparent.png">
 <ul class="main-nav">
-<li><a href="#">About Me</a></li>
-<li><a href="#">My Work</a></li>
-<li><a href="#">Contact Me</a></li>
+<li><a href="#about">About Me</a></li>
+<li><a href="#works">My Work</a></li>
+<li><a href="#contact">Contact Me</a></li>
 </ul>
 </div>
 </nav>
 <div class="hero-text-box">
 <h1>Stef <span class="name">Bracke</span></h1>
+<h1 class="animate__animated animate__rubberBand">An animated element</h1>
+
 <h4>Technical Artist</h4>
-<a class="btn btn-full"
+<a class="btn btn-full js--scroll-to-plans"
    href="#">Contact Me</a>
-<a class="btn btn-ghost"
+<a class="btn btn-ghost js--scroll-to-start"
    href="#">See My Work</a>
 </div>
 </header>
-<section class="section-features js--section-features">
-<div class="row">
+<section class="section-features js--section-features" id="about">
+<div class="row js--wp-1">
 <h2>What I do</h2>
 <p class="long-copy">
 I'm a technical artist, which means I can do a lot of
@@ -108,7 +108,7 @@ myself.
 </div>
 </div>
 </section>
-<section class="section-works">
+<section class="section-works" id="works">
 <ul class="works-showcase clearfix">
 <li>
 <figure class="work-image">
@@ -193,15 +193,15 @@ myself.
      src="resources/img/brussels.jpg">
 <h3>Brussels</h3>
 <div class="city-feature">
-<i class="ion-ios-person icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user icon-small"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 1200+ happy clients
 </div>
 <div class="city-feature">
-<i class="ion-ios-star icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star icon-small"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
 60+ projects completed
 </div>
 <div class="city-feature">
-<i class="ion-social-twitter icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter icon-small"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
 <a href="#">@stef_bracke</a>
 </div>
 </div>
@@ -210,15 +210,15 @@ myself.
      src="resources/img/gent.jpg">
 <h3>Gent</h3>
 <div class="city-feature">
-<i class="ion-ios-person icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user icon-small"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 1200+ happy clients
 </div>
 <div class="city-feature">
-<i class="ion-ios-star icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star icon-small"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
 60+ projects completed
 </div>
 <div class="city-feature">
-<i class="ion-social-twitter icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter icon-small"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
 <a href="#">@stef_bracke</a>
 </div>
 </div>
@@ -227,15 +227,15 @@ myself.
      src="resources/img/leuven.jpg">
 <h3>Leuven</h3>
 <div class="city-feature">
-<i class="ion-ios-person icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user icon-small"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 1200+ happy clients
 </div>
 <div class="city-feature">
-<i class="ion-ios-star icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star icon-small"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
 60+ projects completed
 </div>
 <div class="city-feature">
-<i class="ion-social-twitter icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter icon-small"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
 <a href="#">@stef_bracke</a>
 </div>
 </div>
@@ -244,15 +244,14 @@ myself.
      src="resources/img/breda.jpg">
 <h3>Breda</h3>
 <div class="city-feature">
-<i class="ion-ios-person icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user icon-small"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
 1200+ happy clients
 </div>
 <div class="city-feature">
-<i class="ion-ios-star icon-small"></i>
-60+ projects completed
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-star icon-small"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>60+ projects completed
 </div>
 <div class="city-feature">
-<i class="ion-social-twitter icon-small"></i>
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter icon-small"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
 <a href="#">@stef_bracke</a>
 </div>
 </div>
@@ -295,7 +294,7 @@ Vandenbussche</cite>
 </div>
 </div>
 </section>
-<section class="section-plans">
+<section class="section-plans js--section-plans">
 <div class="row">
 <h2>Start working with me today</h2>
 </div>
@@ -311,17 +310,17 @@ day</p>
 <div>
 <ul>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>3D
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>3D
 models
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Animations
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Animations
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Games
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Games
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Websites
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Websites
 </li>
 </ul>
 </div>
@@ -342,17 +341,17 @@ day</p>
 <div>
 <ul>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>3D
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>3D
 models
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Animations
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Animations
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Games
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Games
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Websites
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Websites
 </li>
 </ul>
 </div>
@@ -373,17 +372,17 @@ day</p>
 <div>
 <ul>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>3D
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>3D
 models
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Animations
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Animations
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Games
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Games
 </li>
 <li>
-<i class="ion-ios-checkmark icon-small"></i>Websites
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-monitor-check icon-small"><path d="m9 10 2 2 4-4"/><rect width="20" height="14" x="2" y="3" rx="2"/><path d="M12 17v4"/><path d="M8 21h8"/></svg>Websites
 </li>
 </ul>
 </div>
@@ -394,7 +393,7 @@ models
 </div>
 </div>
 </div>
-<section class="section-form">
+<section class="section-form" id="contact">
 <div class="row">
 <h2>We're happy to hear from you</h2>
 </div>
@@ -490,10 +489,12 @@ us?</label>
 </div>
 <div class="col span-1-of-2">
 <ul class="social-links">
-<li><a href="#"><i class="ion-social-facebook"></i></a></li>
-<li><a href="#"><i class="ion-social-twitter"></i></a></li>
-<li><a href="#"><i class="ion-social-googleplus"></i></a></li>
-<li><a href="#"><i class="ion-social-instagram"></i></a></li>
+
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a></li>
+<!--<li><a href="#"><i class="ion-social-facebook"></i></a></li>-->
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg></a></li>
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg></a></li>
+<li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg></a></li>
 </ul>
 </div>
 </div>
@@ -503,6 +504,6 @@ us?</label>
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script src="resources/js/script.js"></script>
+<script src="resources/js/script.js" type="module"></script>
 </body>
 </html>

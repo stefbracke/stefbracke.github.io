@@ -1,6 +1,9 @@
 # Ignore Node.js dependencies (if using npm)
 node_modules/
 
+# Ignore parce-cache
+.parcel-cache
+
 # Ignore log files
 *.log
 
