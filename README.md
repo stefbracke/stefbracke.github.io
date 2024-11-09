@@ -10,5 +10,5 @@ This project showcases my work and is my webdesign playground.<br>
 Explore my projects and feel free to reach out!<br>
 
 <p align="center">
-    <img src="resources/img/logo_transparant.png" alt="Stef Bracke Brand Logo">
+    <img src="resources/img/logo_transparent.png" alt="Stef Bracke Brand Logo">
 </p>
