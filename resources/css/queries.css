@@ -31,6 +31,7 @@
     .case-study-reverse .case-study-copy { order: 0; }
     .case-study-gallery { min-height: 460px; }
     .contact-layout { grid-template-columns: 1fr; gap: 42px; }
+    .capability-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 
@@ -90,6 +91,8 @@
     .case-study-gallery { min-height: 360px; }
     .contact-actions { align-items: flex-start; flex-direction: column; }
     .contact-details { padding: 22px; }
+    .capability-grid { grid-template-columns: 1fr; }
+    .capability-grid .box { min-height: 0; }
 }
 
 

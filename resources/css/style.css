@@ -322,6 +322,10 @@ header {
   cursor: pointer;
 }
 
+.js--nav-icon {
+  display: none;
+}
+
 .lucide-menu line,
 .lucide-x path {
   stroke: white;
@@ -374,6 +378,31 @@ header {
 
 .section-features {
   color: #dfe4ea;
+}
+
+.capability-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+  align-items: stretch;
+}
+
+.capability-grid:before,
+.capability-grid:after {
+  display: none;
+  content: none;
+}
+
+.capability-grid .box {
+  display: flex;
+  width: auto;
+  min-height: 290px;
+  margin: 0;
+  flex-direction: column;
+}
+
+.capability-grid .box p {
+  margin-top: auto;
 }
 
 /* ------------------------------------------------------------------------ */
