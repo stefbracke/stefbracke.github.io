@@ -103,3 +103,87 @@ $(document).ready(function () {
 //     closeIcon.toggleClass("hidden");
 //   });
 // });
+});
+
+const articleModal = document.querySelector("#article-modal");
+const articleModalContent = document.querySelector("#article-modal-content");
+const articleModalClose = document.querySelector(".article-modal-close");
+const articleButtons = document.querySelectorAll("[data-article]");
+let articleTrigger = null;
+
+function openArticle(articleId, trigger) {
+  const articleTemplate = document.querySelector(`#article-${articleId}`);
+
+  if (!articleModal || !articleModalContent || !articleTemplate) return;
+
+  articleTrigger = trigger;
+  articleModalContent.replaceChildren(
+    articleTemplate.content.cloneNode(true),
+  );
+  document.body.classList.add("modal-open");
+  articleModal.showModal();
+  articleModalContent.scrollTop = 0;
+  articleModalClose.focus();
+}
+
+function closeArticle() {
+  if (!articleModal?.open) return;
+  articleModal.close();
+}
+
+articleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    openArticle(button.dataset.article, button);
+  });
+});
+
+articleModalClose?.addEventListener("click", closeArticle);
+
+articleModal?.addEventListener("click", (event) => {
+  if (event.target === articleModal) closeArticle();
+});
+
+articleModal?.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  articleModalContent.replaceChildren();
+  articleTrigger?.focus();
+});
+
+const imageModal = document.querySelector("#image-modal");
+const imageModalPreview = document.querySelector(".image-modal-preview");
+const imageModalClose = document.querySelector(".image-modal-close");
+const workImageButtons = document.querySelectorAll(".work-image-button");
+let imageTrigger = null;
+
+function openProjectImage(button) {
+  const image = button.querySelector("img");
+
+  if (!imageModal || !imageModalPreview || !image) return;
+
+  imageTrigger = button;
+  imageModalPreview.src = image.currentSrc || image.src;
+  imageModalPreview.alt = image.alt;
+  document.body.classList.add("modal-open");
+  imageModal.showModal();
+  imageModalClose.focus();
+}
+
+function closeProjectImage() {
+  if (imageModal?.open) imageModal.close();
+}
+
+workImageButtons.forEach((button) => {
+  button.addEventListener("click", () => openProjectImage(button));
+});
+
+imageModalClose?.addEventListener("click", closeProjectImage);
+
+imageModal?.addEventListener("click", (event) => {
+  if (event.target === imageModal) closeProjectImage();
+});
+
+imageModal?.addEventListener("close", () => {
+  document.body.classList.remove("modal-open");
+  imageModalPreview.removeAttribute("src");
+  imageTrigger?.focus();
+});
