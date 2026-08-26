@@ -117,8 +117,8 @@ a:focus-visible {
   place-items: center;
   overflow: hidden;
   background:
-    radial-gradient(circle at 50% 45%, rgb(28 109 208 / 14%), transparent 38%),
-    linear-gradient(135deg, #0a0f18 0%, #0d1521 100%);
+    linear-gradient(90deg, rgb(6 11 18 / 82%) 0%, rgb(8 15 25 / 66%) 58%, rgb(8 15 25 / 54%) 100%),
+    url("assets/swamp-hero.jpg") center / cover no-repeat;
 }
 
 .intro-lockup {
