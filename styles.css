@@ -117,7 +117,7 @@ a:focus-visible {
   place-items: center;
   overflow: hidden;
   background:
-    linear-gradient(90deg, rgb(6 11 18 / 82%) 0%, rgb(8 15 25 / 66%) 58%, rgb(8 15 25 / 54%) 100%),
+    linear-gradient(90deg, rgb(6 11 18 / 76%) 0%, rgb(8 15 25 / 51%) 58%, rgb(8 15 25 / 28%) 100%),
     url("assets/swamp-hero.jpg") center / cover no-repeat;
 }
 
@@ -153,9 +153,11 @@ a:focus-visible {
 
 .intro h1 {
   font-size: clamp(3rem, 7vw, 6.5rem);
-  font-weight: 650;
-  letter-spacing: -0.055em;
+  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: -0.045em;
   line-height: 0.94;
+  text-shadow: 0 2px 20px rgb(0 0 0 / 32%);
 }
 
 .intro h1 span {
@@ -168,7 +170,7 @@ a:focus-visible {
 }
 
 .intro h1 span:last-child {
-  color: #aab8cc;
+  color: #d8c9ad;
   animation-delay: 360ms;
 }
 
