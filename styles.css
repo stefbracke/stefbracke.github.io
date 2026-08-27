@@ -331,21 +331,32 @@ a:focus-visible {
 
 .intro::before {
   position: absolute;
-  z-index: -1;
-  inset: -6%;
+  z-index: 0;
+  inset: 0;
   content: "";
   opacity: calc(1 - var(--hero-progress));
   background:
-    linear-gradient(90deg, rgb(6 11 18 / 76%) 0%, rgb(8 15 25 / 51%) 58%, rgb(8 15 25 / 28%) 100%),
-    url("assets/swamp-hero.jpg") center / cover no-repeat;
-  transform: scale(1.06);
-  transform-origin: center;
+    radial-gradient(circle at 24% 30%, rgb(38 43 48 / 34%), transparent 38%),
+    radial-gradient(circle at 78% 72%, rgb(20 28 36 / 52%), transparent 46%),
+    linear-gradient(135deg, #171b20, #0a111b 72%);
   will-change: auto;
+}
+
+.shader-canvas {
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: calc(1 - var(--hero-progress));
+  pointer-events: none;
 }
 
 .intro-lockup {
   --intro-offset-x: clamp(-90px, -6vw, -30px);
   position: relative;
+  z-index: 2;
   width: min(680px, 82vw);
   opacity: calc(1 - (var(--hero-progress) * 1.18));
   text-align: left;
@@ -463,12 +474,9 @@ a:focus-visible {
   }
 
   .intro::before,
+  .shader-canvas,
   .intro-lockup {
     transition: none;
-  }
-
-  .intro::before {
-    transform: scale(1.06);
   }
 
   .intro-lockup {
