@@ -21,13 +21,9 @@ window.addEventListener("resize", requestHeroUpdate);
 updateHeroProgress();
 
 const projectCards = document.querySelectorAll(".project-card");
-const precisePointer = window.matchMedia("(hover: hover) and (pointer: fine)");
-const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
 
 projectCards.forEach((card) => {
   card.addEventListener("pointermove", (event) => {
-    if (!precisePointer.matches || reducedMotion.matches) return;
-
     const bounds = card.getBoundingClientRect();
     const horizontal = (event.clientX - bounds.left) / bounds.width - 0.5;
     const vertical = (event.clientY - bounds.top) / bounds.height - 0.5;
@@ -38,7 +34,12 @@ projectCards.forEach((card) => {
     card.style.setProperty("--pan-y", `${(-vertical * 6).toFixed(2)}px`);
   }, { passive: true });
 
+  card.addEventListener("pointerenter", () => {
+    card.classList.add("is-tracking");
+  });
+
   card.addEventListener("pointerleave", () => {
+    card.classList.remove("is-tracking");
     card.style.setProperty("--tilt-x", "0deg");
     card.style.setProperty("--tilt-y", "0deg");
     card.style.setProperty("--pan-x", "0px");
