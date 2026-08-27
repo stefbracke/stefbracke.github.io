@@ -15,6 +15,7 @@
 
 html {
   background: var(--background);
+  scroll-behavior: smooth;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
 }
 
 .site-header {
-  position: absolute;
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
@@ -42,6 +43,238 @@ body {
   background: rgb(17 26 41 / 58%);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+}
+
+.content-section {
+  scroll-margin-top: 88px;
+  padding: clamp(88px, 10vw, 144px) clamp(20px, 5vw, 72px);
+  border-top: 1px solid var(--line);
+}
+
+.section-inner {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.section-heading {
+  margin-bottom: clamp(40px, 6vw, 72px);
+}
+
+.section-heading p,
+.section-heading h2 {
+  margin: 0;
+}
+
+.section-heading p {
+  margin-bottom: 12px;
+  color: var(--orange);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.section-heading h2 {
+  font-family: "Segoe UI Variable Display", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  font-weight: 200;
+  letter-spacing: -0.035em;
+  text-transform: uppercase;
+}
+
+.projects-section,
+.about-section {
+  background: #0a0f18;
+}
+
+.articles-section,
+.contact-section {
+  background: #0e1623;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(18px, 2.5vw, 32px);
+}
+
+.project-card {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgb(117 145 180 / 22%);
+  color: var(--foreground);
+  background: #111a29;
+  cursor: pointer;
+  text-align: left;
+}
+
+.project-card::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, transparent 42%, rgb(4 8 13 / 88%) 100%);
+}
+
+.project-card img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 300ms ease, filter 300ms ease;
+}
+
+.project-card > span {
+  position: absolute;
+  z-index: 1;
+  right: 24px;
+  bottom: 22px;
+  left: 24px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.project-card strong,
+.project-card small {
+  display: block;
+}
+
+.project-card strong {
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 500;
+}
+
+.project-card small {
+  color: var(--orange);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.project-card:hover img,
+.project-card:focus-visible img {
+  filter: brightness(1.08);
+  transform: scale(1.025);
+}
+
+.project-card:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
+}
+
+.article-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  background: var(--line);
+}
+
+.article-grid article {
+  min-height: 250px;
+  padding: clamp(24px, 3vw, 40px);
+  background: #111a29;
+}
+
+.article-grid span {
+  color: var(--orange);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+}
+
+.article-grid h3 {
+  margin: 56px 0 14px;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.article-grid p,
+.section-copy p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.split-section {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.75fr) minmax(0, 1.25fr);
+  gap: clamp(48px, 9vw, 140px);
+}
+
+.split-section .section-heading {
+  margin-bottom: 0;
+}
+
+.section-copy {
+  max-width: 680px;
+}
+
+.section-copy p:first-child {
+  margin-top: 0;
+  color: var(--foreground);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.55;
+}
+
+.contact-links {
+  display: grid;
+  gap: 1px;
+  background: var(--line);
+}
+
+.contact-links a {
+  padding: 20px 22px;
+  color: var(--foreground);
+  background: #111a29;
+  text-decoration: none;
+}
+
+.contact-links a:hover,
+.contact-links a:focus-visible {
+  color: var(--orange);
+}
+
+.project-dialog {
+  width: min(560px, calc(100% - 32px));
+  padding: clamp(28px, 5vw, 52px);
+  border: 1px solid var(--line);
+  color: var(--foreground);
+  background: #111a29;
+}
+
+.project-dialog::backdrop {
+  background: rgb(3 7 12 / 78%);
+  backdrop-filter: blur(5px);
+}
+
+.project-dialog > p {
+  color: var(--orange);
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.project-dialog h2 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 300;
+}
+
+#project-dialog-description {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.dialog-close {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: 0;
+  color: var(--foreground);
+  background: transparent;
+  cursor: pointer;
+  font-size: 1.8rem;
+  line-height: 1;
 }
 
 .brand {
@@ -207,6 +440,18 @@ a:focus-visible {
 
   .intro-lockup {
     transform: translateX(-2vw);
+  }
+
+  .project-grid,
+  .article-grid,
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card > span {
+    align-items: start;
+    flex-direction: column;
+    gap: 6px;
   }
 }
 
