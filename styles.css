@@ -8,6 +8,7 @@
   --blue: #1c6dd0;
   --line: #24344c;
   --hero-progress: 0;
+  --scroll-drag: 0px;
 }
 
 * {
@@ -52,6 +53,13 @@ body {
   scroll-margin-top: 88px;
   padding: clamp(88px, 10vw, 144px) clamp(20px, 5vw, 72px);
   border-top: 1px solid var(--line);
+}
+
+.content-stack {
+  position: relative;
+  z-index: 2;
+  transform: translate3d(0, var(--scroll-drag), 0);
+  will-change: transform;
 }
 
 .section-inner {
@@ -514,4 +522,5 @@ a:focus-visible {
   .intro-lockup {
     transform: translateX(var(--intro-offset-x));
   }
+
 }
