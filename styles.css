@@ -336,9 +336,8 @@ a:focus-visible {
   content: "";
   opacity: calc(1 - var(--hero-progress));
   background:
-    radial-gradient(circle at 24% 30%, rgb(38 43 48 / 34%), transparent 38%),
-    radial-gradient(circle at 78% 72%, rgb(20 28 36 / 52%), transparent 46%),
-    linear-gradient(135deg, #171b20, #0a111b 72%);
+    linear-gradient(90deg, rgb(6 11 18 / 66%) 0%, rgb(8 15 25 / 34%) 58%, rgb(8 15 25 / 18%) 100%),
+    url("assets/swamp-hero.jpg") center / cover no-repeat;
   will-change: auto;
 }
 
