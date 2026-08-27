@@ -27,6 +27,10 @@ body {
 }
 
 .site-header {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
@@ -34,8 +38,10 @@ body {
   width: 100%;
   min-height: 88px;
   padding: 16px clamp(20px, 4vw, 64px);
-  border-bottom: 1px solid var(--line);
-  background: var(--header);
+  border-bottom: 1px solid rgb(117 145 180 / 22%);
+  background: rgb(17 26 41 / 58%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .brand {
@@ -112,8 +118,8 @@ a:focus-visible {
 
 .intro {
   display: grid;
-  min-height: calc(100vh - 89px);
-  padding: 48px 24px;
+  min-height: 100vh;
+  padding: 120px 24px 48px;
   place-items: center;
   overflow: hidden;
   background:
@@ -152,11 +158,12 @@ a:focus-visible {
 }
 
 .intro h1 {
-  font-size: clamp(3rem, 7vw, 6.5rem);
-  font-family: "Helvetica Neue", "Segoe UI", Arial, sans-serif;
+  color: var(--foreground);
+  font-size: clamp(2.7rem, 5.6vw, 5.2rem);
+  font-family: "Segoe UI Variable Display", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-weight: 300;
-  letter-spacing: -0.045em;
-  line-height: 0.94;
+  letter-spacing: -0.035em;
+  line-height: 1;
   text-shadow: 0 2px 20px rgb(0 0 0 / 32%);
 }
 
@@ -170,13 +177,13 @@ a:focus-visible {
 }
 
 .intro h1 span:last-child {
-  color: #d8c9ad;
+  color: inherit;
   animation-delay: 360ms;
 }
 
 .intro-role {
   margin-top: 22px;
-  color: var(--muted);
+  color: var(--orange);
   font-size: clamp(0.72rem, 1.1vw, 0.9rem);
   font-weight: 600;
   letter-spacing: 0.32em;
