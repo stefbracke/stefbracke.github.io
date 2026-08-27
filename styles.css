@@ -130,26 +130,8 @@ a:focus-visible {
 .intro-lockup {
   position: relative;
   width: min(680px, 82vw);
-  padding-left: clamp(22px, 3vw, 42px);
-  border-left: 2px solid var(--blue);
   text-align: left;
   transform: translateX(clamp(-90px, -6vw, -30px));
-}
-
-.intro-lockup::after {
-  position: absolute;
-  bottom: -24px;
-  left: clamp(22px, 3vw, 42px);
-  width: 72px;
-  height: 3px;
-  content: "";
-  background: var(--orange);
-  transform-origin: left;
-  animation: draw-line 900ms 650ms ease-out both;
-}
-
-.intro-lockup::after {
-  right: auto;
 }
 
 .intro-role,
@@ -159,10 +141,10 @@ a:focus-visible {
 
 .intro h1 {
   color: var(--foreground);
-  font-size: clamp(2.7rem, 5.6vw, 5.2rem);
+  font-size: clamp(2.55rem, 4.7vw, 4.65rem);
   font-family: "Segoe UI Variable Display", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
-  font-weight: 300;
-  letter-spacing: -0.035em;
+  font-weight: 200;
+  letter-spacing: -0.025em;
   line-height: 1;
   text-shadow: 0 2px 20px rgb(0 0 0 / 32%);
 }
@@ -182,12 +164,12 @@ a:focus-visible {
 }
 
 .intro-role {
-  margin-top: 22px;
+  margin-top: 10px;
   color: var(--orange);
-  font-size: clamp(0.72rem, 1.1vw, 0.9rem);
-  font-weight: 600;
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
+  font-size: clamp(0.78rem, 1.25vw, 1rem);
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  text-transform: none;
   animation: reveal-up 700ms 520ms ease-out both;
 }
 
@@ -200,18 +182,6 @@ a:focus-visible {
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes draw-line {
-  from {
-    opacity: 0;
-    scale: 0 1;
-  }
-
-  to {
-    opacity: 1;
-    scale: 1 1;
   }
 }
 
@@ -250,9 +220,6 @@ a:focus-visible {
     letter-spacing: 0.09em;
   }
 
-  .intro-lockup::after {
-    width: 52px;
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
