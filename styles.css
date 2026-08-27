@@ -502,7 +502,14 @@ a:focus-visible {
 
   .intro::before,
   .intro-lockup {
-    opacity: 1;
-    transform: none;
+    transition: none;
+  }
+
+  .intro::before {
+    transform: scale(1.06);
+  }
+
+  .intro-lockup {
+    transform: translateX(var(--intro-offset-x));
   }
 }

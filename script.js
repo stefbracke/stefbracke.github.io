@@ -10,11 +10,6 @@ let heroUpdateQueued = false;
 const updateHeroProgress = () => {
   heroUpdateQueued = false;
 
-  if (reduceMotion.matches) {
-    document.documentElement.style.setProperty("--hero-progress", 0);
-    return;
-  }
-
   const fadeDistance = hero.offsetHeight * 0.78;
   const progress = Math.min(1, Math.max(0, window.scrollY / fadeDistance));
   document.documentElement.style.setProperty("--hero-progress", progress.toFixed(3));
