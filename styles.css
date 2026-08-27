@@ -106,6 +106,10 @@ body {
 }
 
 .project-card {
+  --tilt-x: 0deg;
+  --tilt-y: 0deg;
+  --pan-x: 0px;
+  --pan-y: 0px;
   position: relative;
   display: block;
   aspect-ratio: 16 / 9;
@@ -117,6 +121,10 @@ body {
   cursor: pointer;
   text-decoration: none;
   text-align: left;
+  transform: perspective(900px) rotateX(var(--tilt-x)) rotateY(var(--tilt-y));
+  transform-style: preserve-3d;
+  transition: transform 220ms cubic-bezier(0.2, 0.8, 0.2, 1), border-color 180ms ease;
+  will-change: transform;
 }
 
 .project-card::after {
@@ -131,10 +139,11 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 300ms ease, filter 300ms ease;
+  transform: translate(var(--pan-x), var(--pan-y)) scale(1.045);
+  transition: transform 180ms ease-out, filter 300ms ease;
 }
 
-.project-card > span {
+.project-caption {
   position: absolute;
   z-index: 1;
   right: 24px;
@@ -144,6 +153,39 @@ body {
   align-items: end;
   justify-content: space-between;
   gap: 16px;
+}
+
+.project-hud {
+  position: absolute;
+  z-index: 2;
+  top: 18px;
+  left: 18px;
+  display: grid;
+  gap: 3px;
+  min-width: 174px;
+  padding: 11px 12px;
+  border-top: 1px solid rgb(255 159 10 / 72%);
+  border-left: 1px solid rgb(255 159 10 / 72%);
+  color: rgb(236 243 250 / 78%);
+  background: rgb(5 10 17 / 52%);
+  font-family: Consolas, "SFMono-Regular", "Liberation Mono", monospace;
+  font-size: 0.57rem;
+  letter-spacing: 0.12em;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translate3d(-6px, 5px, 24px);
+  transition: opacity 160ms ease, transform 220ms ease;
+  backdrop-filter: blur(4px);
+}
+
+.project-hud span:first-child {
+  color: var(--orange);
+}
+
+.project-card:hover .project-hud,
+.project-card:focus-visible .project-hud {
+  opacity: 1;
+  transform: translate3d(0, 0, 24px);
 }
 
 .project-card strong,
@@ -166,7 +208,7 @@ body {
 .project-card:hover img,
 .project-card:focus-visible img {
   filter: brightness(1.08);
-  transform: scale(1.025);
+  transform: translate(var(--pan-x), var(--pan-y)) scale(1.075);
 }
 
 .project-card:focus-visible {
@@ -394,7 +436,7 @@ a:focus-visible {
 }
 
 .intro-role {
-  margin-top: 10px;
+  margin-top: 4px;
   color: var(--orange);
   font-size: clamp(0.78rem, 1.25vw, 1rem);
   font-weight: 400;
@@ -404,7 +446,7 @@ a:focus-visible {
 }
 
 .intro-specialties {
-  margin-top: 14px;
+  margin-top: 6px;
   color: rgb(243 241 236 / 72%);
   font-family: "Segoe UI Variable Text", "Avenir Next", "Helvetica Neue", Arial, sans-serif;
   font-size: clamp(0.72rem, 1vw, 0.9rem);
@@ -457,7 +499,7 @@ a:focus-visible {
     grid-template-columns: 1fr;
   }
 
-  .project-card > span {
+  .project-caption {
     align-items: start;
     flex-direction: column;
     gap: 6px;
@@ -493,6 +535,18 @@ a:focus-visible {
 
   .intro-lockup {
     transform: translateX(var(--intro-offset-x));
+  }
+
+  .project-card,
+  .project-card:hover,
+  .project-card:focus-visible {
+    transform: none;
+  }
+
+  .project-card img,
+  .project-card:hover img,
+  .project-card:focus-visible img {
+    transform: scale(1.045);
   }
 
 }
