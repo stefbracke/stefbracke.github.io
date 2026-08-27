@@ -145,7 +145,23 @@ body {
   height: 100%;
   object-fit: cover;
   transform: translate(var(--pan-x), var(--pan-y)) scale(1.045);
-  transition: transform 180ms ease-out, filter 300ms ease;
+  transition: transform 180ms ease-out, filter 300ms ease, opacity 180ms ease;
+}
+
+.project-card .project-image-wireframe {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+.project-card:hover .project-image-primary,
+.project-card:focus-visible .project-image-primary {
+  opacity: 0;
+}
+
+.project-card:hover .project-image-wireframe,
+.project-card:focus-visible .project-image-wireframe {
+  opacity: 1;
 }
 
 .project-caption {

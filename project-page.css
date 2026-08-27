@@ -74,12 +74,41 @@ h1 {
   letter-spacing: -0.045em;
 }
 
+.project-hero-swap {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
 .project-hero {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  border: 1px solid var(--line);
+  height: 100%;
   object-fit: cover;
+  transition: opacity 180ms ease;
+}
+
+.project-hero-wireframe {
+  opacity: 0;
+}
+
+.project-hero-swap:hover .project-hero-primary,
+.project-hero-swap:focus-visible .project-hero-primary {
+  opacity: 0;
+}
+
+.project-hero-swap:hover .project-hero-wireframe,
+.project-hero-swap:focus-visible .project-hero-wireframe {
+  opacity: 1;
+}
+
+.project-hero-swap:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 4px;
 }
 
 .project-documentation {
