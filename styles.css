@@ -47,6 +47,8 @@ body {
 }
 
 .content-section {
+  position: relative;
+  z-index: 2;
   scroll-margin-top: 88px;
   padding: clamp(88px, 10vw, 144px) clamp(20px, 5vw, 72px);
   border-top: 1px solid var(--line);
@@ -89,8 +91,6 @@ body {
 }
 
 .projects-section {
-  position: relative;
-  z-index: 2;
   box-shadow: 0 -30px 70px rgb(3 7 12 / 36%);
 }
 
@@ -357,7 +357,9 @@ a:focus-visible {
 }
 
 .intro {
-  position: relative;
+  position: sticky;
+  z-index: 0;
+  top: 0;
   isolation: isolate;
   display: grid;
   min-height: 100vh;
@@ -372,13 +374,13 @@ a:focus-visible {
   z-index: -1;
   inset: -6%;
   content: "";
-  opacity: calc(1 - (var(--hero-progress) * 0.62));
+  opacity: 1;
   background:
     linear-gradient(90deg, rgb(6 11 18 / 76%) 0%, rgb(8 15 25 / 51%) 58%, rgb(8 15 25 / 28%) 100%),
     url("assets/swamp-hero.jpg") center / cover no-repeat;
-  transform: translateY(calc(var(--hero-progress) * -7%)) scale(1.06);
+  transform: scale(1.06);
   transform-origin: center;
-  will-change: transform, opacity;
+  will-change: auto;
 }
 
 .intro-lockup {
