@@ -26,7 +26,7 @@ const requestHeroUpdate = () => {
 };
 
 const renderScrollDrag = () => {
-  scrollDrag *= 0.82;
+  scrollDrag *= 0.9;
 
   if (Math.abs(scrollDrag) < 0.05) {
     scrollDrag = 0;
@@ -49,8 +49,8 @@ const updateScrollDrag = () => {
     return;
   }
 
-  const dragLimit = reduceMotion.matches ? 8 : 24;
-  const dragStrength = reduceMotion.matches ? 0.04 : 0.12;
+  const dragLimit = reduceMotion.matches ? 32 : 56;
+  const dragStrength = reduceMotion.matches ? 0.16 : 0.24;
   scrollDrag = Math.max(-dragLimit, Math.min(dragLimit, scrollDrag + delta * dragStrength));
 
   if (!dragFrame) {
